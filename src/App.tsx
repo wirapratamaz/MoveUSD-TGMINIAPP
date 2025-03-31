@@ -1,41 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import twaLogo from './assets/tapps.png'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-import WebApp from '@twa-dev/sdk'
+import { useEffect } from "react"
+import WebApp from "@twa-dev/sdk"
+import Header from "./components/Header"
+import Balance from "./components/Balance"
+import ActionButtons from "./components/ActionButtons"
+import AddContact from "./components/AddContact"
+import RewardsCard from "./components/RewardsCard"
+import AssetsCard from "./components/AssetsCard"
+import "./index.css"
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    // Initialize Telegram WebApp
+    WebApp.ready()
+    WebApp.expand()
+
+    // Set theme color to match the app background
+    WebApp.setHeaderColor("#121212")
+    WebApp.setBackgroundColor("#121212")
+  }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://ton.org/dev" target="_blank">
-          <img src={twaLogo} className="logo" alt="TWA logo" />
-        </a>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>TWA + Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-      {/*  */}
-      <div className="card">
-        <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
-            Show Alert
-        </button>
-      </div>
-    </>
+    <div className="min-h-screen bg-black text-white p-4">
+      <Header />
+      <Balance />
+      <ActionButtons />
+      <AddContact />
+      <RewardsCard />
+      <AssetsCard />
+    </div>
   )
 }
 
 export default App
+
