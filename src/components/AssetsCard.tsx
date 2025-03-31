@@ -1,5 +1,3 @@
-import { CoinIcon } from "./Icons"
-
 const AssetsCard = () => {
   return (
     <div className="bg-zinc-900 rounded-lg p-4 flex justify-between items-center">
