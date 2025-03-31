@@ -5,26 +5,100 @@
   <br>
 </p>
 
-# Telegram Mini Apps(TMA) + React + TypeScript + Vite
+# MoveUSD Telegram Mini App
 
-Vite (which means "fast" in French) is a front-end build tool and development server that aims to provide a faster and leaner development experience for modern web projects. We will utilise Vite to create Telegram Mini App example.
+A Telegram Mini App for MoveUSD - a USD-backed digital cash platform on Solana. This app provides a user interface for checking balances, depositing, sending, requesting, and swapping MoveUSD tokens.
 
-This template provides a minimal setup to get TMA working in Vite with React, TypeScript, HMR and some ESLint rules.
+## Features
 
-## Usage
+- **USD Balance Display**: View your current USD balance
+- **Action Buttons**: Access key functions like Deposit, Send, Request, and Swap
+- **Contact Management**: Add contacts for easy transfers
+- **Rewards System**: View your points and their USD value
+- **Asset Overview**: Track your MoveUSD holdings and value
+
+## Screenshots
+
+<p align="center">
+  <img width="300" src="https://github.com/wirapratamaz/MoveUSD-TGMINIAPP/assets/YOUR_GITHUB_ID/raw/master/screenshots/screenshot.png" alt="MoveUSD Telegram Mini App">
+</p>
+
+## Technologies Used
+
+- **React**: Frontend library for building UI
+- **TypeScript**: Type-safe JavaScript
+- **Vite**: Build tool and development server
+- **TailwindCSS**: Utility-first CSS framework
+- **Telegram WebApp SDK**: Integration with Telegram Mini Apps platform
+
+## Local Development
+
+### Prerequisites
+
+- Node.js 16+
+- Yarn or npm
+
+### Installation
 
 ```bash
-# npm
-npm install
-npm run dev --host
-```
-```bash
-# yarn
+# Clone the repository
+git clone https://github.com/wirapratamaz/MoveUSD-TGMINIAPP.git
+cd MoveUSD-TGMINIAPP
+
+# Install dependencies
 yarn
-yarn dev --host
+# or
+npm install
 ```
 
-# Links
-- [Doc](https://docs.ton.org/develop/dapps/twa)
-- [Example TMA](https://t.me/vite_twa_example_bot/app)
-- [Link](https://twa-dev.github.io/vite-boilerplate/)
+### Running Locally
+
+```bash
+# Run development server
+yarn dev --host
+# or
+npm run dev -- --host
+```
+
+This will start a local development server at https://localhost:5173
+
+### Building for Production
+
+```bash
+# Build the app
+yarn build
+# or
+npm run build
+```
+
+## Deployment
+
+The app is currently deployed on Netlify at [https://moveusd.netlify.app](https://moveusd.netlify.app).
+
+### How to Deploy
+
+1. Create a Netlify account and link your GitHub repository
+2. Configure the build settings:
+   - Build command: `yarn build`
+   - Publish directory: `dist`
+3. Deploy the site
+4. Configure your Telegram Bot with BotFather to use the Netlify URL
+
+## Telegram Bot Setup
+
+1. Create a bot with [@BotFather](https://t.me/BotFather) on Telegram
+2. Use the `/mybots` command
+3. Select your bot
+4. Go to "Bot Settings" → "Menu Button"
+5. Set the button to open your web app URL (e.g., `https://moveusd.netlify.app`)
+
+## Resources
+
+- [Telegram Mini Apps Documentation](https://docs.ton.org/develop/dapps/twa)
+- [Vite Documentation](https://vitejs.dev/)
+- [React Documentation](https://reactjs.org/)
+- [TailwindCSS Documentation](https://tailwindcss.com/docs)
+
+## License
+
+[MIT](LICENSE)
