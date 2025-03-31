@@ -1,10 +1,3 @@
-<p align="center">
-  <br>
-  <img width="240" src="./src/assets/tapps.png" alt="logo of telegram web apps">
-  <br>
-  <br>
-</p>
-
 # MoveUSD Telegram Mini App
 
 A Telegram Mini App for MoveUSD - a USD-backed digital cash platform on Solana. This app provides a user interface for checking balances, depositing, sending, requesting, and swapping MoveUSD tokens.
@@ -19,9 +12,7 @@ A Telegram Mini App for MoveUSD - a USD-backed digital cash platform on Solana. 
 
 ## Screenshots
 
-<p align="center">
-  <img width="300" src="https://github.com/wirapratamaz/MoveUSD-TGMINIAPP/assets/YOUR_GITHUB_ID/raw/master/screenshots/screenshot.png" alt="MoveUSD Telegram Mini App">
-</p>
+![image](https://github.com/user-attachments/assets/0da8fdad-ef81-4407-829b-af18920c9867)
 
 ## Technologies Used
 
