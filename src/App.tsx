@@ -7,9 +7,10 @@ import AddContact from "./components/AddContact"
 import RewardsCard from "./components/RewardsCard"
 import AssetsCard from "./components/AssetsCard"
 import DepositMethodsView from "./components/DepositMethodsView"
+import SendView from "./components/SendView"
 import "./index.css"
 
-type View = "main" | "deposit"
+type View = "main" | "deposit" | "send"
 
 function App() {
   const [currentView, setCurrentView] = useState<View>("main")
@@ -50,6 +51,8 @@ function App() {
   const handleActionClick = (action: string) => {
     if (action === "Deposit") {
       setCurrentView("deposit")
+    } else if (action === "Send") {
+      setCurrentView("send")
     }
     // Handle other actions here
   }
@@ -79,6 +82,10 @@ function App() {
 
         {currentView === "deposit" && (
           <DepositMethodsView onBackClick={() => setCurrentView("main")} />
+        )}
+
+        {currentView === "send" && (
+          <SendView onBackClick={() => setCurrentView("main")} />
         )}
       </div>
     </div>

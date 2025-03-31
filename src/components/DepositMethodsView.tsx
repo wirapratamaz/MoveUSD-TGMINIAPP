@@ -1,5 +1,4 @@
 import React from 'react'
-import { ArrowDown } from './Icons'
 
 // Icons for deposit methods
 const CryptoExchangeIcon = () => (

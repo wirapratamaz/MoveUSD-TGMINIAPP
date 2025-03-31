@@ -6,7 +6,6 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerDescription,
-  DrawerClose,
 } from './ui/drawer'
 
 interface CurrencyOption {
