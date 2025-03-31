@@ -1,6 +1,10 @@
 import { ArrowDown, ArrowUpRight, ArrowDownLeft, ArrowsExchange } from "./Icons"
 
-const ActionButtons = () => {
+interface ActionButtonsProps {
+  onActionClick: (action: string) => void
+}
+
+const ActionButtons: React.FC<ActionButtonsProps> = ({ onActionClick }) => {
   const actions = [
     { name: "Deposit", icon: <ArrowDown className="w-5 h-5" /> },
     { name: "Send", icon: <ArrowUpRight className="w-5 h-5" /> },
@@ -18,6 +22,7 @@ const ActionButtons = () => {
               ${index === 0 ? 'rounded-tl-lg rounded-bl-lg' : ''}
               ${index === actions.length - 1 ? 'rounded-tr-lg rounded-br-lg' : ''}
             `}
+            onClick={() => onActionClick(action.name)}
           >
             {action.icon}
             <span className="text-xs mt-1.5">
