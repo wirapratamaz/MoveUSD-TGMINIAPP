@@ -65,7 +65,11 @@ const DepositMethodsView: React.FC<DepositMethodsViewProps> = ({ onBackClick }) 
       
       <div className="space-y-4">
         {methods.map((method, index) => (
-          <div key={index} className="bg-zinc-900 rounded-lg p-4 flex items-center">
+          <div 
+            key={index} 
+            className="bg-zinc-900 rounded-lg p-4 flex items-center cursor-pointer"
+            onClick={() => onBackClick()}
+          >
             {method.icon}
             <div className="ml-3">
               <div className="font-medium">{method.title}</div>
