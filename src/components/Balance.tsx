@@ -1,15 +1,16 @@
-import { useState } from "react"
 import { ChevronDown } from "./Icons"
 
 const Balance = () => {
-  const balance = 100.00; // Mock balance
+  const balance = 5.20; // Reference shows 5.20 as the balance
 
   return (
-    <div className="bg-gray-900 rounded-lg p-4 mb-6">
-      <div className="text-gray-400 text-sm mb-1">Your Balance</div>
-      <div className="flex items-baseline">
-        <span className="text-white text-2xl font-bold">${balance.toFixed(2)}</span>
-        <span className="text-gray-400 text-sm ml-1">USD</span>
+    <div className="mb-6">
+      <div className="flex items-center justify-between bg-zinc-900 rounded py-1.5 px-3 w-full mb-2">
+        <span className="text-sm font-medium">USD Balance</span>
+        <ChevronDown className="w-4 h-4" />
+      </div>
+      <div className="text-4xl font-bold tracking-tighter">
+        {balance.toFixed(2)}
       </div>
     </div>
   )
