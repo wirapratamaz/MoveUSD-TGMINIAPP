@@ -9,9 +9,10 @@ import AssetsCard from "./components/AssetsCard"
 import DepositMethodsView from "./components/DepositMethodsView"
 import SendView from "./components/SendView"
 import RequestView from "./components/RequestView"
+import SwapView from "./components/SwapView"
 import "./index.css"
 
-type View = "main" | "deposit" | "send" | "request"
+type View = "main" | "deposit" | "send" | "request" | "swap"
 
 function App() {
   const [currentView, setCurrentView] = useState<View>("main")
@@ -56,8 +57,9 @@ function App() {
       setCurrentView("send")
     } else if (action === "Request") {
       setCurrentView("request")
+    } else if (action === "Swap") {
+      setCurrentView("swap")
     }
-    // Handle other actions here
   }
 
   return (
@@ -93,6 +95,10 @@ function App() {
 
         {currentView === "request" && (
           <RequestView onBackClick={() => setCurrentView("main")} />
+        )}
+
+        {currentView === "swap" && (
+          <SwapView onBackClick={() => setCurrentView("main")} />
         )}
       </div>
     </div>
