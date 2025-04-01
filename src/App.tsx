@@ -8,9 +8,10 @@ import RewardsCard from "./components/RewardsCard"
 import AssetsCard from "./components/AssetsCard"
 import DepositMethodsView from "./components/DepositMethodsView"
 import SendView from "./components/SendView"
+import RequestView from "./components/RequestView"
 import "./index.css"
 
-type View = "main" | "deposit" | "send"
+type View = "main" | "deposit" | "send" | "request"
 
 function App() {
   const [currentView, setCurrentView] = useState<View>("main")
@@ -53,6 +54,8 @@ function App() {
       setCurrentView("deposit")
     } else if (action === "Send") {
       setCurrentView("send")
+    } else if (action === "Request") {
+      setCurrentView("request")
     }
     // Handle other actions here
   }
@@ -86,6 +89,10 @@ function App() {
 
         {currentView === "send" && (
           <SendView onBackClick={() => setCurrentView("main")} />
+        )}
+
+        {currentView === "request" && (
+          <RequestView onBackClick={() => setCurrentView("main")} />
         )}
       </div>
     </div>
