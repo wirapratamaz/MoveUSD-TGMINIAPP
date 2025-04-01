@@ -62,6 +62,14 @@ function App() {
     }
   }
 
+  const handleNavigateToSwap = () => {
+    setCurrentView("swap")
+  }
+  
+  const handleBackToHome = () => {
+    setCurrentView("main")
+  }
+
   return (
     <div className="flex justify-center w-full bg-black">
       <div className="w-full max-w-md min-h-screen bg-black text-white px-4 pb-16">
@@ -76,7 +84,12 @@ function App() {
             <AddContact />
             <div className="mb-2">
               <div className="text-sm mb-2">Rewards</div>
-              <RewardsCard />
+              <RewardsCard 
+                title="MoveUSD Rewards" 
+                description="Earn points when you hold MoveUSD"
+                points={1}
+                onNavigateToSwap={handleNavigateToSwap}
+              />
             </div>
             <div className="mt-4">
               <div className="text-sm mb-2">Assets</div>
@@ -98,7 +111,7 @@ function App() {
         )}
 
         {currentView === "swap" && (
-          <SwapView onBackClick={() => setCurrentView("main")} />
+          <SwapView onBack={handleBackToHome} />
         )}
       </div>
     </div>

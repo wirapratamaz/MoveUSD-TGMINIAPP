@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
 interface SwapViewProps {
-  onBackClick: () => void
+  onBack: () => void
 }
 
-const SwapView: React.FC<SwapViewProps> = ({ onBackClick }) => {
+const SwapView: React.FC<SwapViewProps> = ({ onBack }) => {
   const [fromAmount, setFromAmount] = useState<string>('0')
   const [toAmount, setToAmount] = useState<string>('0')
   const [availableBalance] = useState<number>(1)
@@ -19,7 +19,7 @@ const SwapView: React.FC<SwapViewProps> = ({ onBackClick }) => {
     e.preventDefault()
     // Simulate successful swap
     alert('Swap successful!')
-    onBackClick()
+    onBack()
   }
 
   return (
