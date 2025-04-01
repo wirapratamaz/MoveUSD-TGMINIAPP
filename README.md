@@ -62,10 +62,6 @@ yarn build
 npm run build
 ```
 
-## Deployment
-
-The app is currently deployed on Netlify at [https://moveusd.netlify.app](https://moveusd.netlify.app).
-
 ### How to Deploy
 
 1. Create a Netlify account and link your GitHub repository
