@@ -66,6 +66,14 @@ function App() {
     setCurrentView("swap")
   }
   
+  const handleNavigateToSend = () => {
+    setCurrentView("send")
+  }
+  
+  const handleNavigateToReceive = () => {
+    setCurrentView("deposit")
+  }
+  
   const handleBackToHome = () => {
     setCurrentView("main")
   }
@@ -93,7 +101,11 @@ function App() {
             </div>
             <div className="mt-4">
               <div className="text-sm mb-2">Assets</div>
-              <AssetsCard />
+              <AssetsCard 
+                onReceive={handleNavigateToReceive}
+                onSend={handleNavigateToSend}
+                onSwap={handleNavigateToSwap}
+              />
             </div>
           </>
         )}
