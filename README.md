@@ -1,6 +1,6 @@
 # MoveUSD Telegram Mini App
 
-A Telegram Mini App for MoveUSD - a USD-backed digital cash platform on Solana. This app provides a user interface for checking balances, depositing, sending, requesting, and swapping MoveUSD tokens.
+A Demonstrate Telegram Mini App for MoveUSD - a USD-backed digital cash platform on Solana. This app provides a user interface for checking balances, depositing, sending, requesting, and swapping MoveUSD tokens.
 
 ## Features
 
@@ -77,7 +77,7 @@ npm run build
 2. Use the `/mybots` command
 3. Select your bot
 4. Go to "Bot Settings" → "Menu Button"
-5. Set the button to open your web app URL (e.g., `https://moveusd.netlify.app`)
+5. Set the button to open your web app URL (e.g., `https://moveusd.netlify.app`) //example url deploy
 
 ## Resources
 
