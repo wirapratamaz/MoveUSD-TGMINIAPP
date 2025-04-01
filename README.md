@@ -13,6 +13,8 @@ A Demonstrate Telegram Mini App for MoveUSD - a USD-backed digital cash platform
 ## Screenshots
 
 ![image](https://github.com/user-attachments/assets/0da8fdad-ef81-4407-829b-af18920c9867)
+![Screenshot 2025-04-01 at 23 55 30](https://github.com/user-attachments/assets/9b807009-dff8-47e5-b954-93b40bc1cd34)
+
 
 ## Technologies Used
 
